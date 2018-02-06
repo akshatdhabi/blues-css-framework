@@ -1,0 +1,22 @@
+.pagination{
+  display: flex;
+  padding: 0.5em;
+    a{
+      color: set-text-color($primary-bg);
+      display: inline-block;
+      background: rgba(200,200,200,0.1);
+      padding: 0.4em 0.8em;
+      margin: 0 .1em;
+      border-radius: 15%;
+      transition: $transition;
+      &.active{
+        background-color: $primary;
+        color: set-text-color($primary);
+      }
+
+      &:hover{
+        background-color: darken($primary,5);
+        color: set-text-color($primary);
+      }
+    }
+}

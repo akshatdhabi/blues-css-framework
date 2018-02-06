@@ -1,0 +1,209 @@
+// Removing default styling
+input,
+textarea,select {
+  appearance:none;
+}
+
+//placeholder text
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: set-text-color($primary-bg);
+  opacity: 0.5;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: set-text-color($primary-bg);
+  opacity: 0.5;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: set-text-color($primary-bg);
+  opacity: 0.5;
+
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: set-text-color($primary-bg);
+  opacity: 0.5;
+
+}
+
+
+
+
+.input{
+  position: relative;
+
+    select,input,textarea{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    background: darken($primary-bg,10);
+    border: none;
+    border-radius: 0.2em;
+    font-size: $font-medium;
+    padding: 0.8em 0.5em;
+    color: set-text-color($primary-bg);
+    opacity: 0.7;
+    position: relative;
+    transition: $transition;
+    overflow: hidden;
+    &:focus{
+      opacity: 1;
+      outline: 0;
+      }
+    }
+    textarea{
+      resize: vertical;
+    }
+
+    .input-icon{
+      position: absolute;
+      right:4%;
+      top:50%;
+      color:set-label-color($primary-bg);
+    }
+}
+
+    label{
+      font-size: 15px;
+      padding-left: 4px;
+      color:set-label-color($primary-bg);
+      opacity: 0.7;
+    }
+
+    .select-input{
+      position: relative;
+        &:after{
+          font-family: FontAwesome;
+          content: "\f0d7";
+          color: set-text-color($primary-bg);
+          opacity: 0.5;
+          font-size: 1em;
+          position: absolute;
+          right: 6%;
+          top:48%;
+        }
+
+  }
+
+
+  // ------------------------------------ //
+
+
+input[type=checkbox] {
+  display:none;
+  appearance: checkbox;
+  outline: 0;
+}
+
+input[type=radio] {
+  display:none;
+  appearance: radio;
+  outline: 0;
+}
+
+
+
+.checkbox{
+  margin-bottom: .2em;
+  label{
+    cursor: pointer;
+    font-size: .8em;
+    padding-left: 4px;
+    color:set-label-color($primary-bg);
+    opacity: 1;
+    input[type=checkbox] {
+    + .label-text:before{
+        content: "\f0c8";
+        color:darken($secondary,10);
+        font-family: FontAwesome;
+        font-size: normal;
+        font-weight: normal;
+        speak:none;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing:antialiased;
+        width: 1em;
+        font-size: 1.5em;
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align:middle;
+      }
+      &:checked +.label-text{
+        color:$primary;
+        opacity: 1;
+      }
+
+      &:checked + .label-text:before{
+        content:"\f14a";
+        color:$primary;
+        animation: check 0.4s ease-in-out;
+      }
+
+      &:disabled+ .label-text:before{
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      &:disabled+ .label-text{
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+}
+
+.radio{
+  margin-bottom: .2em;
+  label{
+    cursor: pointer;
+    font-size: .8em;
+    padding-left: 4px;
+    opacity: 1;
+    color:set-label-color($primary-bg);
+    input[type=radio] {
+    + .label-text:before{
+        content: "\f1ce";
+        color:darken($secondary,10);
+        font-family: FontAwesome;
+        font-size: normal;
+        font-weight: normal;
+        speak:none;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing:antialiased;
+        width: 1em;
+        font-size: 1.5em;
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align:middle;
+      }
+      &:checked +.label-text{
+        color:$primary;
+      }
+
+      &:checked + .label-text:before{
+        content:"\f111";
+        color:$primary;
+        text-align: center;
+        animation: check 0.4s ease-in-out;
+      }
+      &:disabled+ .label-text:before{
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      &:disabled+ .label-text{
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+
+//FORM animations // buggy on firefox
+
+@keyframes check {
+0%{transform: scale(0);}
+50%{transform: scale(1.2);}
+100%{transform: scale(1);}
+}

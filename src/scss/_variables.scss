@@ -1,0 +1,98 @@
+//Variables live here
+//Changes made here reflect in the final file.
+
+
+// Main palette
+$primary-bg:#1E242B;
+$secondary-bg:#007B8C;
+$primary:#14CC97;
+$secondary:#279aac;
+$contrast:#e46248;
+$compliment:#36D879;
+$light:#dffffd;
+
+$success:#46A346;
+$info:#1792D0;
+$warning:#FFAC38;
+$error:#BD362F;
+$grey-button:#414141;
+
+//Background Shades
+//Some suggest shades to be used as background
+$body-blue1:#2385b9;
+$body-blue2:#2c3e50;
+$body-blue3:#00356B;
+$body-blue4:#0072BB;
+$body-blue4:#006DB0;
+$body-dark:#292929;
+$body-grey:#434343;
+$card-dark:#2A2A2A;
+$card-light:#FFFFFF;
+//Text colors
+$text-dark:#292929;
+$text-grey: #909090;
+$text-light: #F9F9F9;
+
+//Helper colors
+$black:#000000;
+$white:#FFFFFF;
+$black-accent1:#1c1c1c;  //Great for navbars
+$black-accent2:#232323;  //
+$black-accent3:#101419;  //
+
+//colors
+$red:#f44336;
+$pink:#e91e63;
+$purple:#9c27b0;
+$green:#8bc34a;
+$indigo:#3f51b5;
+$blue:#2196f3;
+$cyan:#00bcd4;
+$teal:#009688;
+$lime:#cddc39;
+$amber:#ffb300;
+
+// Social colors
+$facebook: #3b5999;
+$twitter: #55acee;
+$googleplus: #dd4b39;
+$linkedin:#0077B5;
+$youtube:#cd201f;
+$quora:#b92b27;
+$pinterest: #bd081c;
+$skype: #00AFF0;
+$whatsapp: #25D366;
+$snapchat: #FFFC00;
+$instagram: #4e433c;
+$tumblr: #2b4964;
+
+
+
+// Containers and grid system //
+//
+$container-large:1400px;
+$container-med:900px;
+$container-small:400px;
+$full-width:100%;
+$columns:12; // Change total columns here
+$xsmobile:480px;
+$mobile:600px;
+$tablet:768px;
+$largescreen:1280px;
+
+//Typography
+//
+$basefont:Lato;
+
+$font-large:  16px;
+$font-medium: 15px;
+$font-small:  14px;
+
+$line-height:1.3em;
+
+$font-weight-light:lighter;
+$font-weight-normal:400;
+$font-weight-bold:600;
+
+//transition
+$transition :all 0.25s ease-in-out;

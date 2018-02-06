@@ -1,0 +1,10 @@
+blockquote {
+padding: 1em;
+background: darken($primary-bg,10);
+
+@each $name, $color in $colors{
+  &.quote-#{$name}{
+    border-left:5px solid $color;
+  }
+}
+}

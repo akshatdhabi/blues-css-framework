@@ -1,0 +1,114 @@
+body{
+font-family:$basefont;
+font-size: $font-small;
+color:set-text-color($primary-bg);
+line-height: $line-height;
+font-weight: $font-weight-normal;
+
+@include media($tablet){
+  font-size: $font-medium;
+}
+
+@include media($largescreen){
+  font-size: $font-large;
+}
+
+}
+
+img{
+  font-size:14px;
+}
+p{
+  font-size: 1.1em;
+  margin: 0.5em 0;
+}
+.lead{
+  font-size: 1.4em;
+  margin: 0.8em 0;
+  font-weight: $font-weight-normal;
+
+}
+
+a{
+  color:$primary;
+  text-decoration: none;
+  &:hover{
+    color: darken($primary,10);
+  }
+  &:focus{
+    color:$contrast;
+  }
+}
+
+//headings
+
+h1,
+h2,
+h3,
+h4,h5,h6 {
+  margin: 0;
+  line-height: $line-height;
+  font-weight: $font-weight-normal;
+}
+
+h1{
+  font-size: 3em;
+  font-weight: $font-weight-bold;
+}
+h2{
+  font-size: 2.5em;
+}
+h3{
+  font-size: 2.2em;
+}
+h4{
+  font-size: 1.8em;
+}
+h5{
+  font-size: 1.5em;
+}
+h6{
+  font-size: 1.3em;
+}
+
+//Font styling
+.light-text{
+  font-weight: $font-weight-light;
+}
+
+.bold-text{
+  font-weight: $font-weight-bold;
+}
+
+.center-text{
+  text-align: center;
+}
+
+.left-text{
+  text-align: left;
+}
+
+.right-text{
+  text-align: right;
+}
+
+.justify-text{
+  text-align: justify;
+}
+
+.text-dark{
+  color:$text-dark !important;
+}
+.text-light{
+  color:$text-light !important;
+}
+
+.text-grey{
+  color:$text-grey!important;
+}
+
+.subheading{
+ color: $text-grey;
+ font-size: 0.5em;
+ font-weight: $font-weight-light;
+}

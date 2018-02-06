@@ -1,0 +1,32 @@
+$colors: (
+  primary:#14CC97,
+  secondary:#279aac,
+  contrast:#e46248,
+  compliment:#36D879,
+  success:#46A346,
+  info:#1792D0,
+  warning:#FFAC38,
+  error:#BD362F,
+  red:#f44336,
+  pink:#e91e63,
+  purple:#9c27b0,
+  green:#8bc34a,
+  indigo:#3f51b5,
+  blue:#2196f3,
+  cyan:#00bcd4,
+  teal:#009688,
+  lime:#cddc39,
+  amber:#ffb300
+);
+
+@each $name, $color in $colors {
+  .text-#{$name}{
+    color:$color !important;
+  }
+}
+
+@each $name, $color in $colors {
+  .#{$name}{
+    background:$color;
+  }
+}

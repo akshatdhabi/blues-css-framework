@@ -1,0 +1,53 @@
+.card{
+  background: $card-light;
+  color: $text-dark;
+  height: auto;
+  padding-bottom: 0.5em;
+  margin: 0.5em;;
+  box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.5);
+  transition: $transition;
+  img{
+    width: 100%;
+  }
+
+  &:hover{
+    box-shadow: 0px 0px 13px 6px rgba(0,0,0,0.28);
+  }
+
+  .card-heading{
+    padding: 0.5em 0.4em;
+    font-size: 1.2em;
+    font-weight: $font-weight-bold;
+  }
+
+  .card-content{
+    padding: 0 0.4em;
+  }
+
+  .card-action{
+    border-top: 1px solid #ccc;
+    margin: 1em 0em 0.2em 0em;
+    padding-top:0.4em;
+
+    a{
+      font-weight: $font-weight-bold;
+      padding: 0.2em 0.8em 0.4em 0.4em;
+      margin-left: 0.2em;
+
+      &:hover{
+        background-color: $primary;
+        color: set-text-color($primary)
+      }
+    }
+  }
+}
+
+.card-dark{
+  background: $card-dark;
+  .card-heading,.card-content{
+    color: $text-light;
+  }
+  .card-action{
+    border-top: 1px solid #444;
+  }
+}

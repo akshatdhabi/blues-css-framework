@@ -1,0 +1,92 @@
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.row-space-between {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+
+}
+
+.row-space-around {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+
+}
+
+  @for $i from 1 through $columns{
+    .col-xs-#{$i}{
+      flex-basis: 100% / $columns *$i;
+      max-width: 100% / $columns *$i;
+      box-sizing: border-box;
+      padding: 0.5em;
+    }
+  }
+  @for $i from 1 through $columns{
+    .col-xs-offset-#{$i}{
+      margin-left:100% / $columns *$i;
+      box-sizing: border-box;
+    }
+  }
+
+@media screen and (min-width:$mobile){
+  @for $i from 1 through $columns{
+    .col-s-#{$i}{
+      flex-basis: 100% / $columns *$i;
+      max-width: 100% / $columns *$i;
+      box-sizing: border-box;
+      padding: 0.5em;
+    }
+  }
+  @for $i from 1 through $columns{
+    .col-s-offset-#{$i}{
+      margin-left:100% / $columns *$i;
+      box-sizing: border-box;
+    }
+  }
+
+}
+
+@media screen and (min-width:$tablet){
+  @for $i from 1 through $columns{
+    .col-med-#{$i}{
+      flex-basis: 100% / $columns *$i;
+      max-width: 100% / $columns *$i;
+      box-sizing: border-box;
+      padding: 0.5em;
+    }
+  }
+  @for $i from 1 through $columns{
+    .col-med-offset-#{$i}{
+      margin-left:100% / $columns *$i;
+      box-sizing: border-box;
+    }
+  }
+
+}
+
+ @media only screen and (min-width:$largescreen){
+   @for $i from 1 through $columns{
+     .col-large-#{$i}{
+       flex-basis: 100% / $columns *$i;
+       max-width: 100% / $columns *$i;
+       box-sizing: border-box;
+       padding: 0.5em;
+     }
+   }
+   @for $i from 1 through $columns{
+     .col-large-offset-#{$i}{
+       margin-left:100% / $columns *$i;
+       box-sizing: border-box;
+     }
+   }
+ }

@@ -1,0 +1,26 @@
+@mixin media($breakpoint,$query:"min-width") {
+    @media screen and (#{$query}:#{$breakpoint}) { @content; }
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $text-dark;
+  } @else {
+    @return $text-light;
+}
+}
+
+@function set-label-color($color) {
+  @if (lightness($color) > 50) {
+    @return $text-dark;
+  } @else {
+    @return $text-grey;
+}
+}
+@function set-button-text-color($color) {
+  @if (lightness($color) > 60) {
+    @return $text-dark;
+  } @else {
+    @return $text-light;
+}
+}

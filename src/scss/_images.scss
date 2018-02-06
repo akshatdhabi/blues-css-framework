@@ -1,0 +1,22 @@
+img{
+  max-width: 100%;
+  height: auto;
+}
+.img-responsive{
+  display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-round{
+  border-radius: 50%;
+}
+
+.img-round-corner{
+  border-radius: 5%;
+}
+
+.img-align-center{
+  display: block;
+  margin: 0 auto;
+}

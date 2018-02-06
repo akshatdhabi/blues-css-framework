@@ -1,0 +1,116 @@
+button{
+  background: none;
+  border:none;
+  outline: 0;
+
+}
+
+//reset blue box
+
+
+input[type=button],input[type=submit]{
+  outline: 0;
+}
+
+.button{
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  color:$text-light;
+  padding:0.65em 1.6em;
+  margin: 12px 8px;
+  border-radius: 0em;
+  transition: $transition;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  &:hover{
+    opacity: 0.7;
+    color:inherit;
+
+  }
+  &:active{
+    opacity: 0.5;
+  }
+  &.disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+.button-round{
+  border-radius: 2em;
+}
+
+//block
+.button-block{
+  width: 100%;
+  display: block;
+  margin: 15px 0px;
+}
+@each $name, $color in $colors {
+  .outline-#{$name}{
+    font-weight: $font-weight-bold;
+    color:$color;
+    background: none;
+    border: .15em solid $color;
+    &:hover{
+      color:set-button-text-color($color);
+      background: $color;
+      opacity: 1;
+    }
+  }
+}
+
+.button-medium{
+  font-size: 15px;
+  padding:.9em 1.8em;
+}
+
+.button-big{
+  font-size: 16px;
+  padding:1.1em 2.1em;
+}
+
+.button-group{
+  margin:0 8px;
+  display: flex;
+  max-width: 80%;
+  .button{
+    float:left;
+    margin:8px 0;
+    &:not(:last-child) {
+  border-right: none;
+      }
+    }
+    &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.button-group-round{
+  display: flex;
+  max-width: 80%;
+    .button{
+    float:left;
+    margin:8px 0;
+    &:not(:last-child) {
+  border-right: none;
+  border-radius: 0;
+      }
+      &:first-child{
+        border-radius: 2em 0 0 2em;
+      }
+      &:last-child{
+        border-radius: 0 2em 2em 0;
+      }
+    }
+    &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}

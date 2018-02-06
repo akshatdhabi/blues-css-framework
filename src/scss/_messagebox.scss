@@ -1,0 +1,11 @@
+.messagebox{
+  padding: 1em;
+}
+.messagebox-dark{
+  background: darken($primary-bg,10);
+  padding: 1em;
+}
+.messagebox-light{
+  background: lighten($primary-bg,10);
+  padding: 1em;
+}

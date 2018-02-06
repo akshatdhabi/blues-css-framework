@@ -1,0 +1,24 @@
+ul{
+  display: flex;
+  &.breadcrumbs{
+    list-style: none;
+    padding: 0.8em 0.5em;
+
+    li{
+      padding: .3em ;
+      display:inline-block;
+      cursor:default;
+      &+li:before{
+        padding: .5em;
+        color:set-label-color($primary-bg);
+        content: "/\00a0";
+      }
+
+      a:hover{
+        text-decoration: underline;
+        color:$primary;
+        cursor: pointer;
+      }
+    }
+  }
+}
